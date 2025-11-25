@@ -15,7 +15,7 @@ export GOOGLE_API_KEY="" # API KEY FOR GOGOLE GEMINI
 benchmark=vsibench
 output_path=logs/$(TZ="America/New_York" date "+%Y%m%d")
 num_processes=4
-num_frames=32
+num_frames=16
 launcher=accelerate
 
 available_models="qwen2_5_vl_7b_instruct,llava_one_vision_qwen2_0p5b_ov_32f,llava_one_vision_qwen2_7b_ov_32f,llava_next_video_7b_qwen2_32f,llama3_vila1p5_8b_32f,llama3_longvila_8b_128frames_32f,longva_7b_32f,internvl2_2b_8f,internvl2_8b_8f"
