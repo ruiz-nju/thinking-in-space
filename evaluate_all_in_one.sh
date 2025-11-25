@@ -75,7 +75,7 @@ for model in "${models[@]}"; do
         ;;
     "qwen2_5_vl_7b_instruct")
         model_family="qwen2_5_vl"
-        model_args="pretrained=Qwen/Qwen2.5-VL-7B-Instruct,modality=video,max_frames_num=$num_frames"
+        model_args="pretrained=Qwen/Qwen2.5-VL-7B-Instruct,max_num_frames=$num_frames"
         ;;
     "llava_one_vision_qwen2_0p5b_ov_32f")
         model_family="llava_onevision"
