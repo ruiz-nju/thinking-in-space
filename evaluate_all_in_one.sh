@@ -18,7 +18,7 @@ num_processes=4
 num_frames=32
 launcher=accelerate
 
-available_models="llava_one_vision_qwen2_0p5b_ov_32f,llava_one_vision_qwen2_7b_ov_32f,llava_next_video_7b_qwen2_32f,llama3_vila1p5_8b_32f,llama3_longvila_8b_128frames_32f,longva_7b_32f,internvl2_2b_8f,internvl2_8b_8f"
+available_models="qwen2_5_vl_7b_instruct,llava_one_vision_qwen2_0p5b_ov_32f,llava_one_vision_qwen2_7b_ov_32f,llava_next_video_7b_qwen2_32f,llama3_vila1p5_8b_32f,llama3_longvila_8b_128frames_32f,longva_7b_32f,internvl2_2b_8f,internvl2_8b_8f"
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
@@ -72,6 +72,10 @@ for model in "${models[@]}"; do
     "gpt_4o_2024_08_06_f16")
         model_family="gpt4v"
         model_args="model_version=gpt-4o-2024-08-06,modality=video,max_frames_num=16"
+        ;;
+    "qwen2_5_vl_7b_instruct")
+        model_family="qwen2_5_vl"
+        model_args="pretrained=Qwen/Qwen2.5-VL-7B-Instruct,modality=video,max_frames_num=$num_frames"
         ;;
     "llava_one_vision_qwen2_0p5b_ov_32f")
         model_family="llava_onevision"

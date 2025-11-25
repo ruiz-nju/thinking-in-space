@@ -9,10 +9,9 @@ dist
 *.egg-info
 venv
 .vscode/
-temp
+temp*
 __pycache__
 .ipynb_checkpoints
-temp
 .DS_STORE
 # IPython
 profile_default/
